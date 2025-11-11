@@ -1,0 +1,38 @@
+{
+  "model_name": "lgbm_ranker_baseline_fixed_v1",
+  "creation_date": "2025-11-11 08:24:06",
+  "story": "Story 12.4 - Retrain with fixed (no-leakage) interface",
+  "architecture": "Two-stage prediction (imputation \u2192 features \u2192 ranking)",
+  "features": {
+    "count": 242,
+    "types": [
+      "amplitude",
+      "probability",
+      "interference",
+      "entanglement",
+      "temporal"
+    ],
+    "include_proximity": false,
+    "include_low_boundary": false
+  },
+  "training": {
+    "samples": 10589,
+    "events": 10589,
+    "event_id_range": [
+      1,
+      10589
+    ],
+    "training_time_seconds": 32.65028119087219,
+    "lgbm_params": {
+      "n_estimators": 100,
+      "learning_rate": 0.1,
+      "num_leaves": 31,
+      "max_depth": -1,
+      "min_child_samples": 20,
+      "verbosity": 1,
+      "random_state": 42
+    }
+  },
+  "data_leakage_status": "FIXED - uses imputed probabilities for prediction",
+  "prediction_interface": "predict_with_imputation(historical_context, ranker_model)"
+}

@@ -1,0 +1,575 @@
+{
+  "test_metadata": {
+    "test_date": "2025-11-11 10:23:30",
+    "model": "lgbm_ranker_baseline_fixed_v1.pkl",
+    "architecture": "Fixed (NO LEAKAGE) - Two-stage prediction",
+    "events_tested": 1000,
+    "event_range": [
+      10590,
+      11589
+    ]
+  },
+  "primary_metrics": {
+    "overall_recall_at_20": 0.5092,
+    "total_correct": 2546,
+    "total_positions": 5000
+  },
+  "wrong_distribution": {
+    "0_wrong": {
+      "count": 26,
+      "percentage": 2.6
+    },
+    "1_wrong": {
+      "count": 174,
+      "percentage": 17.4
+    },
+    "2_wrong": {
+      "count": 313,
+      "percentage": 31.3
+    },
+    "3_wrong": {
+      "count": 315,
+      "percentage": 31.5
+    },
+    "4_wrong": {
+      "count": 151,
+      "percentage": 15.1
+    },
+    "5_wrong": {
+      "count": 21,
+      "percentage": 2.1
+    }
+  },
+  "extreme_vs_middle": {
+    "excellent_good_0_1_wrong": {
+      "count": 200,
+      "percentage": 20.0
+    },
+    "poor_2_3_wrong": {
+      "count": 628,
+      "percentage": 62.8
+    },
+    "acceptable_4_5_wrong": {
+      "count": 172,
+      "percentage": 17.2
+    }
+  },
+  "qv_difficulty_categories": {
+    "EXCELLENT": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      17,
+      19,
+      21,
+      22,
+      23
+    ],
+    "GOOD": [],
+    "MEDIUM": [],
+    "POOR": [],
+    "CRITICAL": [
+      16,
+      18,
+      20,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ]
+  },
+  "qv_metrics": {
+    "1": {
+      "appearances": 121,
+      "recall": 1.0,
+      "avg_imputed_prob_when_correct": 0.12347107438016534,
+      "avg_imputed_prob_when_wrong": 0,
+      "avg_rank_when_correct": 1.0413223140495869,
+      "false_positive_rate": 0.879
+    },
+    "2": {
+      "appearances": 132,
+      "recall": 1.0,
+      "avg_imputed_prob_when_correct": 0.13272727272727275,
+      "avg_imputed_prob_when_wrong": 0,
+      "avg_rank_when_correct": 2.0,
+      "false_positive_rate": 0.868
+    },
+    "3": {
+      "appearances": 127,
+      "recall": 1.0,
+      "avg_imputed_prob_when_correct": 0.12000000000000002,
+      "avg_imputed_prob_when_wrong": 0,
+      "avg_rank_when_correct": 3.9763779527559056,
+      "false_positive_rate": 0.873
+    },
+    "4": {
+      "appearances": 109,
+      "recall": 0.9908256880733946,
+      "avg_imputed_prob_when_correct": 0.11462962962962965,
+      "avg_imputed_prob_when_wrong": 0.0,
+      "avg_rank_when_correct": 3.0,
+      "false_positive_rate": 0.886
+    },
+    "5": {
+      "appearances": 121,
+      "recall": 1.0,
+      "avg_imputed_prob_when_correct": 0.11983471074380168,
+      "avg_imputed_prob_when_wrong": 0,
+      "avg_rank_when_correct": 4.991735537190083,
+      "false_positive_rate": 0.879
+    },
+    "6": {
+      "appearances": 125,
+      "recall": 1.0,
+      "avg_imputed_prob_when_correct": 0.12928000000000003,
+      "avg_imputed_prob_when_wrong": 0,
+      "avg_rank_when_correct": 6.104,
+      "false_positive_rate": 0.875
+    },
+    "7": {
+      "appearances": 137,
+      "recall": 1.0,
+      "avg_imputed_prob_when_correct": 0.13386861313868614,
+      "avg_imputed_prob_when_wrong": 0,
+      "avg_rank_when_correct": 18.0,
+      "false_positive_rate": 0.863
+    },
+    "8": {
+      "appearances": 123,
+      "recall": 1.0,
+      "avg_imputed_prob_when_correct": 0.12455284552845532,
+      "avg_imputed_prob_when_wrong": 0,
+      "avg_rank_when_correct": 8.983739837398375,
+      "false_positive_rate": 0.877
+    },
+    "9": {
+      "appearances": 130,
+      "recall": 1.0,
+      "avg_imputed_prob_when_correct": 0.1304615384615385,
+      "avg_imputed_prob_when_wrong": 0,
+      "avg_rank_when_correct": 12.976923076923077,
+      "false_positive_rate": 0.87
+    },
+    "10": {
+      "appearances": 154,
+      "recall": 1.0,
+      "avg_imputed_prob_when_correct": 0.1515584415584416,
+      "avg_imputed_prob_when_wrong": 0,
+      "avg_rank_when_correct": 15.025974025974026,
+      "false_positive_rate": 0.846
+    },
+    "11": {
+      "appearances": 138,
+      "recall": 1.0,
+      "avg_imputed_prob_when_correct": 0.1365217391304348,
+      "avg_imputed_prob_when_wrong": 0,
+      "avg_rank_when_correct": 10.971014492753623,
+      "false_positive_rate": 0.862
+    },
+    "12": {
+      "appearances": 111,
+      "recall": 1.0,
+      "avg_imputed_prob_when_correct": 0.11045045045045046,
+      "avg_imputed_prob_when_wrong": 0,
+      "avg_rank_when_correct": 18.99099099099099,
+      "false_positive_rate": 0.889
+    },
+    "13": {
+      "appearances": 113,
+      "recall": 1.0,
+      "avg_imputed_prob_when_correct": 0.10920353982300889,
+      "avg_imputed_prob_when_wrong": 0,
+      "avg_rank_when_correct": 6.991150442477876,
+      "false_positive_rate": 0.887
+    },
+    "14": {
+      "appearances": 115,
+      "recall": 1.0,
+      "avg_imputed_prob_when_correct": 0.11217391304347828,
+      "avg_imputed_prob_when_wrong": 0,
+      "avg_rank_when_correct": 14.017391304347827,
+      "false_positive_rate": 0.885
+    },
+    "15": {
+      "appearances": 133,
+      "recall": 0.9924812030075187,
+      "avg_imputed_prob_when_correct": 0.1351515151515152,
+      "avg_imputed_prob_when_wrong": 0.0,
+      "avg_rank_when_correct": 15.946969696969697,
+      "false_positive_rate": 0.866
+    },
+    "16": {
+      "appearances": 118,
+      "recall": 0.0,
+      "avg_imputed_prob_when_correct": 0,
+      "avg_imputed_prob_when_wrong": 0.11254237288135598,
+      "avg_rank_when_correct": 0,
+      "false_positive_rate": 0.0
+    },
+    "17": {
+      "appearances": 133,
+      "recall": 1.0,
+      "avg_imputed_prob_when_correct": 0.13654135338345869,
+      "avg_imputed_prob_when_wrong": 0,
+      "avg_rank_when_correct": 10.0,
+      "false_positive_rate": 0.867
+    },
+    "18": {
+      "appearances": 123,
+      "recall": 0.0,
+      "avg_imputed_prob_when_correct": 0,
+      "avg_imputed_prob_when_wrong": 0.11837398373983742,
+      "avg_rank_when_correct": 0,
+      "false_positive_rate": 0.0
+    },
+    "19": {
+      "appearances": 135,
+      "recall": 0.9925925925925926,
+      "avg_imputed_prob_when_correct": 0.13358208955223885,
+      "avg_imputed_prob_when_wrong": 0.0,
+      "avg_rank_when_correct": 19.98507462686567,
+      "false_positive_rate": 0.864
+    },
+    "20": {
+      "appearances": 121,
+      "recall": 0.008264462809917356,
+      "avg_imputed_prob_when_correct": 0.10000000000000003,
+      "avg_imputed_prob_when_wrong": 0.12166666666666667,
+      "avg_rank_when_correct": 20.0,
+      "false_positive_rate": 0.001
+    },
+    "21": {
+      "appearances": 145,
+      "recall": 1.0,
+      "avg_imputed_prob_when_correct": 0.14524137931034484,
+      "avg_imputed_prob_when_wrong": 0,
+      "avg_rank_when_correct": 16.979310344827585,
+      "false_positive_rate": 0.855
+    },
+    "22": {
+      "appearances": 116,
+      "recall": 1.0,
+      "avg_imputed_prob_when_correct": 0.1181034482758621,
+      "avg_imputed_prob_when_wrong": 0,
+      "avg_rank_when_correct": 8.0,
+      "false_positive_rate": 0.884
+    },
+    "23": {
+      "appearances": 130,
+      "recall": 1.0,
+      "avg_imputed_prob_when_correct": 0.13215384615384618,
+      "avg_imputed_prob_when_wrong": 0,
+      "avg_rank_when_correct": 12.0,
+      "false_positive_rate": 0.87
+    },
+    "24": {
+      "appearances": 112,
+      "recall": 0.0,
+      "avg_imputed_prob_when_correct": 0,
+      "avg_imputed_prob_when_wrong": 0.10678571428571433,
+      "avg_rank_when_correct": 0,
+      "false_positive_rate": 0.008
+    },
+    "25": {
+      "appearances": 139,
+      "recall": 0.0,
+      "avg_imputed_prob_when_correct": 0,
+      "avg_imputed_prob_when_wrong": 0.13496402877697847,
+      "avg_rank_when_correct": 0,
+      "false_positive_rate": 0.0
+    },
+    "26": {
+      "appearances": 131,
+      "recall": 0.0,
+      "avg_imputed_prob_when_correct": 0,
+      "avg_imputed_prob_when_wrong": 0.13038167938931303,
+      "avg_rank_when_correct": 0,
+      "false_positive_rate": 0.0
+    },
+    "27": {
+      "appearances": 136,
+      "recall": 0.0,
+      "avg_imputed_prob_when_correct": 0,
+      "avg_imputed_prob_when_wrong": 0.1408823529411765,
+      "avg_rank_when_correct": 0,
+      "false_positive_rate": 0.0
+    },
+    "28": {
+      "appearances": 123,
+      "recall": 0.0,
+      "avg_imputed_prob_when_correct": 0,
+      "avg_imputed_prob_when_wrong": 0.12276422764227646,
+      "avg_rank_when_correct": 0,
+      "false_positive_rate": 0.0
+    },
+    "29": {
+      "appearances": 124,
+      "recall": 0.0,
+      "avg_imputed_prob_when_correct": 0,
+      "avg_imputed_prob_when_wrong": 0.12016129032258067,
+      "avg_rank_when_correct": 0,
+      "false_positive_rate": 0.0
+    },
+    "30": {
+      "appearances": 145,
+      "recall": 0.0,
+      "avg_imputed_prob_when_correct": 0,
+      "avg_imputed_prob_when_wrong": 0.14565517241379314,
+      "avg_rank_when_correct": 0,
+      "false_positive_rate": 0.0
+    },
+    "31": {
+      "appearances": 123,
+      "recall": 0.0,
+      "avg_imputed_prob_when_correct": 0,
+      "avg_imputed_prob_when_wrong": 0.12845528455284555,
+      "avg_rank_when_correct": 0,
+      "false_positive_rate": 0.0
+    },
+    "32": {
+      "appearances": 153,
+      "recall": 0.0,
+      "avg_imputed_prob_when_correct": 0,
+      "avg_imputed_prob_when_wrong": 0.15176470588235294,
+      "avg_rank_when_correct": 0,
+      "false_positive_rate": 0.0
+    },
+    "33": {
+      "appearances": 131,
+      "recall": 0.0,
+      "avg_imputed_prob_when_correct": 0,
+      "avg_imputed_prob_when_wrong": 0.1285496183206107,
+      "avg_rank_when_correct": 0,
+      "false_positive_rate": 0.0
+    },
+    "34": {
+      "appearances": 134,
+      "recall": 0.0,
+      "avg_imputed_prob_when_correct": 0,
+      "avg_imputed_prob_when_wrong": 0.13283582089552243,
+      "avg_rank_when_correct": 0,
+      "false_positive_rate": 0.0
+    },
+    "35": {
+      "appearances": 130,
+      "recall": 0.0,
+      "avg_imputed_prob_when_correct": 0,
+      "avg_imputed_prob_when_wrong": 0.1253846153846154,
+      "avg_rank_when_correct": 0,
+      "false_positive_rate": 0.0
+    },
+    "36": {
+      "appearances": 131,
+      "recall": 0.0,
+      "avg_imputed_prob_when_correct": 0,
+      "avg_imputed_prob_when_wrong": 0.12839694656488554,
+      "avg_rank_when_correct": 0,
+      "false_positive_rate": 0.0
+    },
+    "37": {
+      "appearances": 120,
+      "recall": 0.0,
+      "avg_imputed_prob_when_correct": 0,
+      "avg_imputed_prob_when_wrong": 0.11933333333333335,
+      "avg_rank_when_correct": 0,
+      "false_positive_rate": 0.0
+    },
+    "38": {
+      "appearances": 116,
+      "recall": 0.0,
+      "avg_imputed_prob_when_correct": 0,
+      "avg_imputed_prob_when_wrong": 0.11862068965517245,
+      "avg_rank_when_correct": 0,
+      "false_positive_rate": 0.0
+    },
+    "39": {
+      "appearances": 142,
+      "recall": 0.0,
+      "avg_imputed_prob_when_correct": 0,
+      "avg_imputed_prob_when_wrong": 0.14732394366197188,
+      "avg_rank_when_correct": 0,
+      "false_positive_rate": 0.0
+    }
+  },
+  "confidence_analysis": {
+    "very_low": {
+      "correct": 17295,
+      "wrong": 17763,
+      "total": 35058
+    },
+    "low": {
+      "correct": 1797,
+      "wrong": 2145,
+      "total": 3942
+    },
+    "very_high": {
+      "correct": 0,
+      "wrong": 0,
+      "total": 0
+    },
+    "high": {
+      "correct": 0,
+      "wrong": 0,
+      "total": 0
+    },
+    "medium": {
+      "correct": 0,
+      "wrong": 0,
+      "total": 0
+    }
+  },
+  "improvement_targets": {
+    "medium_confidence_positions": [],
+    "high_fp_positions": [
+      [
+        12,
+        0.889,
+        1.0
+      ],
+      [
+        13,
+        0.887,
+        1.0
+      ],
+      [
+        4,
+        0.886,
+        0.9908256880733946
+      ],
+      [
+        14,
+        0.885,
+        1.0
+      ],
+      [
+        22,
+        0.884,
+        1.0
+      ],
+      [
+        1,
+        0.879,
+        1.0
+      ],
+      [
+        5,
+        0.879,
+        1.0
+      ],
+      [
+        8,
+        0.877,
+        1.0
+      ],
+      [
+        6,
+        0.875,
+        1.0
+      ],
+      [
+        3,
+        0.873,
+        1.0
+      ],
+      [
+        9,
+        0.87,
+        1.0
+      ],
+      [
+        23,
+        0.87,
+        1.0
+      ],
+      [
+        2,
+        0.868,
+        1.0
+      ],
+      [
+        17,
+        0.867,
+        1.0
+      ],
+      [
+        15,
+        0.866,
+        0.9924812030075187
+      ],
+      [
+        19,
+        0.864,
+        0.9925925925925926
+      ],
+      [
+        7,
+        0.863,
+        1.0
+      ],
+      [
+        11,
+        0.862,
+        1.0
+      ],
+      [
+        21,
+        0.855,
+        1.0
+      ],
+      [
+        10,
+        0.846,
+        1.0
+      ]
+    ]
+  },
+  "recommendations": {
+    "confidence_boosting": [],
+    "feature_enhancements": [],
+    "algorithm_modifications": [
+      {
+        "priority": "MEDIUM",
+        "target": "Ensemble Confidence Voting",
+        "problem": "Single model produces middle-ground predictions",
+        "solution": "Use multiple imputation methods, vote only on high-agreement positions",
+        "expected_impact": "Force more predictions to extremes (high confidence = agree, low = disagree)",
+        "implementation": "Create ensemble of: frequency, pattern-based, temporal-weighted"
+      }
+    ],
+    "imputation_improvements": [
+      {
+        "priority": "MEDIUM",
+        "target": "Temporal Weighting in Imputation",
+        "problem": "Simple frequency treats all 50 events equally",
+        "solution": "Weight recent events more heavily (exponential decay)",
+        "expected_impact": "Better capture trends, improve recall by 5-10%",
+        "implementation": "Modify _impute_next_event_probabilities() to apply decay weights"
+      }
+    ]
+  }
+}
