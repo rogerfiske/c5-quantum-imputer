@@ -50,6 +50,8 @@ production/models/*.joblib
 production/models/*.pth
 
 # Data Files (CSV, Parquet - can be large)
+# Keep c5_Matrix.csv as it's essential for project operation
+!data/raw/c5_Matrix.csv
 data/raw/*.csv
 data/processed/*.parquet
 experiments/*/data/*.parquet
